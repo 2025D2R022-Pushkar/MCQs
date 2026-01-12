@@ -232,7 +232,7 @@ int main() {
   return 0;
 }`,
       options: ["1", "2", "0", "3"],
-      answerIndex: 1
+      answerIndex: 0
     },
     {
       id: "U2-27",
@@ -500,3 +500,4 @@ int main() {
     }
   ]
 };
+
