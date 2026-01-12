@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="quiz-top">
+      <div>
+        <div id="quizTitle" style="font-size:1.15rem; font-weight:700">Quiz</div>
+        <div class="badge" id="quizMeta">Loading…</div>
+      </div>
+
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center">
+        <a class="btn" href="index.html">Home</a>
+
+        <label class="small" for="jumpSel" style="color:var(--muted)">Jump:</label>
+        <select id="jumpSel" class="btn">
+          <option value="">Q1</option>
+        </select>
+
+        <button class="btn" id="btnPrev" type="button">Prev</button>
+        <button class="btn" id="btnNext" type="button">Next</button>
+        <button class="btn btn-primary" id="btnSubmit" type="button">Submit</button>
+        <button class="btn btn-danger" id="btnReset" type="button">Reset</button>
+      </div>
+    </div>
+
+    <div class="small" style="margin-top:10px; padding:0 4px">
+      Note: Answers are shown only after Submit. Code-output questions assume a typical GCC-like environment unless stated.
+    </div>
+
+    <hr class="sep" />
+
+    <div id="questionHost"></div>
+
+    <div id="resultBox" class="q" style="display:none; margin-top:14px">
+      <h3 style="margin:0 0 6px">Result</h3>
+      <div id="resultText" class="small"></div>
+    </div>
+  </main>
+
+  <!-- quiz loader -->
+  <script src="quiz.js"></script>
+</body>
+</html>
