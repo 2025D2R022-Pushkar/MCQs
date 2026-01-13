@@ -12,12 +12,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Missing semicolon after int x = 10",
         "printf needs <stdlib.h>",
         "return 0 is invalid in main",
+        "Missing semicolon after int x = 10",
         "x must be declared static"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-02",
@@ -31,12 +31,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "a = 10 should be a == 10",
         "if cannot compare integers",
+        "a = 10 should be a == 10",
         "printf cannot be inside if",
         "else is mandatory to compile"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-03",
@@ -73,12 +73,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "return &x; (returning address of local variable)",
         "int *p = f(); (calling function returning pointer)",
         "printf(\"%d\", *p); (printing int)",
-        "int x = 10; (initialization)"
+        "int x = 10; (initialization)",
+        "return &x; (returning address of local variable)"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-05",
@@ -92,12 +92,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Should pass &x to scanf",
         "scanf cannot read integers",
+        "Should pass &x to scanf",
         "printf must be before scanf",
         "Need %f instead of %d"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-06",
@@ -112,12 +112,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Missing i++ inside loop",
         "while cannot be used with int",
         "printf stops i from changing",
+        "Missing i++ inside loop",
         "i must start at 1"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-07",
@@ -130,12 +130,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Out-of-bounds access (valid indices 0..2)",
         "Array must be initialized with 4 elements",
+        "Out-of-bounds access (valid indices 0..2)",
         "printf cannot print array elements",
         "a[3] always equals 0"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-08",
@@ -149,12 +149,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "gets is unsafe (buffer overflow risk)",
         "s must be declared as int",
         "printf cannot print strings",
-        "Need &s in gets"
+        "Need &s in gets",
+        "gets is unsafe (buffer overflow risk)"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-09",
@@ -184,15 +184,13 @@ int main() {
   return 0;
 }`,
       options: [
-        "Unspecified/undefined behavior due to multiple modifications without sequencing",
         "x++ is illegal inside printf",
         "printf can print only one value",
+        "Unspecified/undefined behavior due to multiple modifications without sequencing",
         "Needs scanf before printf"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
-
-    // More debugging: switch fallthrough, missing break, etc.
     {
       id: "D-11",
       q: "Unexpected output occurs. What is the likely fix?",
@@ -208,12 +206,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Add break statements to prevent fall-through",
         "Replace switch with while loop",
+        "Add break statements to prevent fall-through",
         "Use scanf instead of printf",
         "Use %c format specifier"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-12",
@@ -241,18 +239,18 @@ int main() {
 `#include <stdio.h>
 int main() {
   int n = 3;
-  int a[n];  // assume exam considers standard C89/C90
+  int a[n];
   a[0] = 1;
   printf("%d", a[0]);
   return 0;
 }`,
       options: [
-        "Variable length arrays are not supported in older C standards (e.g., C90); depends on standard/compiler",
         "Arrays cannot use variables for size in any C",
         "a[0] cannot be assigned",
-        "printf cannot print array elements"
+        "printf cannot print array elements",
+        "Variable length arrays are not supported in older C standards (e.g., C90); depends on standard/compiler"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-14",
@@ -268,12 +266,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Inside f, a is a pointer parameter; sizeof(a) gives pointer size, not array size",
         "sizeof cannot be used on parameters",
         "x must be initialized",
+        "Inside f, a is a pointer parameter; sizeof(a) gives pointer size, not array size",
         "Need sizeof(*a)"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-15",
@@ -309,12 +307,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Use-after-free (dangling pointer dereference)",
         "Memory leak",
+        "Use-after-free (dangling pointer dereference)",
         "Double free",
         "Compilation error"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-17",
@@ -329,12 +327,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "p is uninitialized; dereferencing it is undefined behavior",
         "x must be global",
         "Need **p instead of *p",
-        "printf cannot print pointer value"
+        "printf cannot print pointer value",
+        "p is uninitialized; dereferencing it is undefined behavior"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-18",
@@ -349,12 +347,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Modifying string literal through pointer is undefined behavior",
         "Need <stdlib.h>",
         "strlen is missing",
+        "Modifying string literal through pointer is undefined behavior",
         "s must be declared as char s[]"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-19",
@@ -387,15 +385,13 @@ int main() {
   return 0;
 }`,
       options: [
-        "Should check fp != NULL and close the file with fclose(fp)",
         "Need <stdlib.h> only",
+        "Should check fp != NULL and close the file with fclose(fp)",
         "fgetc cannot be used with FILE*",
         "printf must be fprintf"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
-
-    // More function bugs, prototype mismatch
     {
       id: "D-21",
       q: "What is the likely issue in older/strict compilation modes?",
@@ -408,12 +404,12 @@ int main() {
 }
 int add(int a,int b){ return a+b; }`,
       options: [
-        "add is used before a visible prototype (diagnostic required in modern C)",
         "Functions cannot appear after main",
         "printf cannot print x",
-        "int return type is illegal"
+        "int return type is illegal",
+        "add is used before a visible prototype (diagnostic required in modern C)"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-22",
@@ -426,12 +422,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Division by zero at runtime",
         "Missing header",
         "a and b must be float",
+        "Division by zero at runtime",
         "printf requires %f"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-23",
@@ -445,12 +441,12 @@ int main() {
   return 0;
 }`,
       options: [
-        "Assignment used instead of comparison; condition becomes false so prints B",
         "Else is wrong",
+        "Assignment used instead of comparison; condition becomes false so prints B",
         "printf should be scanf",
         "x must be declared float"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-24",
@@ -487,15 +483,13 @@ int main(){
   return 0;
 }`,
       options: [
-        "swap uses call-by-value; use pointers (int *a, int *b) to swap caller variables",
         "Need to return t",
         "swap must be recursive",
-        "printf requires &x and &y"
+        "printf requires &x and &y",
+        "swap uses call-by-value; use pointers (int *a, int *b) to swap caller variables"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
-
-    // Arrays & strings debugging
     {
       id: "D-26",
       q: "What is the main issue?",
@@ -507,12 +501,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Array too small: needs 4 chars including '\\0'",
         "printf cannot print strings",
         "Must use puts not printf",
+        "Array too small: needs 4 chars including '\\0'",
         "String literals cannot initialize arrays"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-27",
@@ -526,12 +520,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Out-of-bounds: valid indices are 0..4; loop and access are wrong",
         "Arrays cannot be used in loops",
+        "Out-of-bounds: valid indices are 0..4; loop and access are wrong",
         "printf must use %f",
         "a must be initialized with braces"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-28",
@@ -564,12 +558,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "x is uninitialized (indeterminate value)",
         "printf cannot print integers",
         "x must be static",
-        "Need scanf before printf always"
+        "Need scanf before printf always",
+        "x is uninitialized (indeterminate value)"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-30",
@@ -585,15 +579,13 @@ int main(){
   return 0;
 }`,
       options: [
-        "Buffer overflow: destination a is too small for \"World\\0\"",
         "strcpy copies only one character",
         "Need strcmp not strcpy",
+        "Buffer overflow: destination a is too small for \"World\\0\"",
         "b must be char*"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
-
-    // File I/O & pointers, more depth
     {
       id: "D-31",
       q: "What is the issue?",
@@ -627,12 +619,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Using file pointer after fclose (invalid stream usage)",
         "Need mode \"r\" not \"w\"",
+        "Using file pointer after fclose (invalid stream usage)",
         "fputs cannot write strings",
         "fclose should be removed always"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-33",
@@ -646,12 +638,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Wrong format specifier: should use %p (cast to void*) to print address",
         "p must be initialized to NULL",
         "Need *p not p",
-        "printf cannot print pointers"
+        "printf cannot print pointers",
+        "Wrong format specifier: should use %p (cast to void*) to print address"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-34",
@@ -665,12 +657,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Comparing char with string literal; should be 'A' not \"A\"",
         "scanf cannot read chars",
         "Need %d not %c",
+        "Comparing char with string literal; should be 'A' not \"A\"",
         "c must be int"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-35",
@@ -704,12 +696,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "p++ makes p point past x (invalid dereference on second printf)",
         "Post-increment cannot be used with pointers",
+        "p++ makes p point past x (invalid dereference on second printf)",
         "First printf is invalid",
         "Need &p not p"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-37",
@@ -722,12 +714,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Uses bitwise & so second operand evaluated; can divide by zero if x becomes 0; should use && for short-circuit",
         "Bitwise & is illegal",
         "10/x is always safe",
-        "if cannot contain expressions"
+        "if cannot contain expressions",
+        "Uses bitwise & so second operand evaluated; can divide by zero if x becomes 0; should use && for short-circuit"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-38",
@@ -740,12 +732,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Undefined behavior due to modifying x multiple times without sequencing",
         "This is well-defined and prints 12",
         "++ cannot be used in expressions",
+        "Undefined behavior due to modifying x multiple times without sequencing",
         "printf needs <stdlib.h>"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-39",
@@ -780,15 +772,13 @@ int main(){
   return 0;
 }`,
       options: [
-        "Double free (undefined behavior)",
         "Memory leak",
+        "Double free (undefined behavior)",
         "p must be global",
         "malloc cannot allocate arrays"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
-
-    // More: function pointer declaration confusion
     {
       id: "D-41",
       q: "What is the mistake?",
@@ -801,12 +791,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Function pointer declared incorrectly; should be int (*fp)(int,int) = add;",
         "add must be void",
         "printf must be puts",
-        "Need malloc for fp"
+        "Need malloc for fp",
+        "Function pointer declared incorrectly; should be int (*fp)(int,int) = add;"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-42",
@@ -819,12 +809,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Wrong format specifier; %s should be used for string, not %d",
         "s must be char*",
         "printf cannot print arrays",
+        "Wrong format specifier; %s should be used for string, not %d",
         "Need sizeof(s) in printf"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-43",
@@ -858,12 +848,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Type mismatch: &a is int (*)[3], not int*; use int *p = a;",
         "Need **p",
+        "Type mismatch: &a is int (*)[3], not int*; use int *p = a;",
         "printf must print address",
         "Arrays cannot be assigned"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-45",
@@ -878,12 +868,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "p is a pointer; should use p->x (or (*p).x), not p.x",
         "Need <stdlib.h>",
         "struct cannot have int",
-        "printf cannot print struct member"
+        "printf cannot print struct member",
+        "p is a pointer; should use p->x (or (*p).x), not p.x"
       ],
-      answerIndex: 0
+      answerIndex: 3
     },
     {
       id: "D-46",
@@ -897,12 +887,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Writing to a file opened in read mode; open with \"w\" or \"a\"",
         "fputs requires <stdlib.h>",
         "fclose must be before fputs",
+        "Writing to a file opened in read mode; open with \"w\" or \"a\"",
         "fopen returns int not FILE*"
       ],
-      answerIndex: 0
+      answerIndex: 2
     },
     {
       id: "D-47",
@@ -937,16 +927,16 @@ int main(){
   return 0;
 }`,
       options: [
-        "After p = p + 1, p points past x; dereference is invalid (undefined behavior)",
         "Pointer arithmetic is always illegal",
+        "After p = p + 1, p points past x; dereference is invalid (undefined behavior)",
         "Need ++(*p) instead",
         "printf cannot be called twice"
       ],
-      answerIndex: 0
+      answerIndex: 1
     },
     {
       id: "D-49",
-      q: "What is the problem with this macro-like usage?",
+      q: "What is the problem with this code?",
       code:
 `#include <stdio.h>
 int main(){
@@ -955,12 +945,12 @@ int main(){
   return 0;
 }`,
       options: [
-        "Parsed as (x++) + x; modifies and reads x in same expression without sequencing in some contexts; avoid; ambiguous for beginners",
         "Always prints 7",
+        "Parsed as (x++) + x; prints 7",
         "Compilation error due to +++ not allowed",
-        "x+++x means x + ++ax"
+        "Parsed as (x++) + x; modifies and reads x in same expression without sequencing; undefined behavior"
       ],
-      answerIndex: 2
+      answerIndex: 3
     },
     {
       id: "D-50",
